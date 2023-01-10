@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Stats</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://unpkg.com/dexie/dist/dexie.js"></script>
+    <script>
+        // Check that service workers are supported
+        if ("serviceWorker" in navigator) {
+            // Use the window load event to keep the page load performant
+
+            window.addEventListener("load", () => {
+                navigator.serviceWorker.register("./sw.js");
+            });
+        }
+    </script>
+    <link rel="manifest" href="~manifest.json">
+</head>
+
+<body>
+    <header>
+        <h1>Sports Stats</h1>
+        <form id="new-task-form">
+            <input type="text" name="new-task-input" id="new-task-input" placeholder="What do you have planned?" />
+            <input type="text" name="new-stat-input" id="new-stat-input" placeholder="Stat Type?" />
+            <input type="submit" id="new-task-submit" value="Add task" />
+        </form>
+    </header>
+    <main>
+        <section class="task-list">
+            <h2>Stats</h2>
+            <div id="tasks">
+            </div>
+        </section>
+    </main>
+    Counter
+    <div id="cnt"></div>
+    <div><table id="statstable"></table></div>
+    <div><table id="table"></table></div>
+    Stats Panel
+    <div class="mypanel"></div>
+    <div class="mypanel2"></div>
+    <script>
+        //$.getJSON('http://localhost:5000', function (objArray) {
+        //    var array = typeof objArray != 'object' ? JSON.parse(objArray) : objArray;
+        //    console.log(objArray);
+        //    console.log(JSON.stringify(objArray));
+        //    for (var i = 0; i < array.length; i++) {
+        //        var text = `ID: ${array[i].Id}<br>
+        //                        FirstName: ${array[i].First_Name}<br>
+        //                        LasstName: ${array[i].Last_Name}<br>
+        //                        IsActive: ${array[i].IsActive}`
+        //    }
+        //    //var text = `ID: ${data[0].Id}<br>
+        //    //                FirstName: ${data[0].First_Name}<br>
+        //    //                LasstName: ${data[0].Last_Name}<br>
+        //    //                IsActive: ${data[0].IsActive}`
+
+
+        //    $(".mypanel").html(text);
+        //});
+    </script>
+    <script>
+        //$.getJSON('http://time.jsontest.com', function (data) {
+        //    console.log(data);
+        //    var text1 = `Date: ${data.date}<br>
+        //                            Time: ${data.time}<br>
+        //                            Unix time: ${data.milliseconds_since_epoch}`
+
+
+        //    $(".mypanel2").html(text1);
+        //});
+    </script>
+    <script src="index.js"></script>
+</body>
+
+</html>
