@@ -145,7 +145,7 @@ function createStatsTable() {
 
 //Date and Time
 function getDateTime() {
-    $.getJSON('http://time.jsontest.com', function (data) {
+    $.getJSON('https://time.jsontest.com', function (data) {
         //console.log(data);
         var text1 = `Date: ${data.date}<br>
                     Time: ${data.time}<br>
