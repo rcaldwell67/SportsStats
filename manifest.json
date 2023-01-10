@@ -1,6 +1,6 @@
 {
-    "name": "Todo PWA",
-    "short_name": "Todo",
+    "name": "Sports Stats",
+    "short_name": "Stats",
     "icons": [
       {
         "src": "./assets/icon-100.png",
